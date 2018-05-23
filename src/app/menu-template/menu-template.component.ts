@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
-import { MyLibraryService } from '../shared/my-library.service';
+import { MenuTemplateService } from '../shared/menu-template.service';
 
 @Component({
   selector: 'menu-template',
@@ -11,7 +11,6 @@ import { MyLibraryService } from '../shared/my-library.service';
 export class MenuTemplateComponent {
   isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset);
   constructor(private breakpointObserver: BreakpointObserver,
-  public myLibrary: MyLibraryService) {
-
+    public menuTemplateService: MenuTemplateService) {
   }
 }

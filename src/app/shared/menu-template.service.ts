@@ -1,10 +1,19 @@
 import { Injectable } from '@angular/core';
-import { MenuTemplateComponent } from '../menu-template/menu-template.component';
+import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: MenuTemplateComponent
+  providedIn: 'root'
 })
 export class MenuTemplateService {
+  sideNavList$: Observable<string[]>;
+  // tittle: string;
 
-  constructor() { }
+  constructor() {
+
+  }
+
+  // setSideNavList(_sideNavList$: Observable<string[]>) {
+  //   this.sideNavList$ = _sideNavList$;
+  // }
+
 }

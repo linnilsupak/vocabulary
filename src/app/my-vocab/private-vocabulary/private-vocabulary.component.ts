@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyLibraryService } from '../../shared/my-library.service';
 
 @Component({
   selector: 'v-private-vocabulary',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrivateVocabularyComponent implements OnInit {
 
-  constructor() { }
+  constructor(myLibrary: MyLibraryService) {
+    console.log('libraries', myLibrary.libraries);
+  }
 
   ngOnInit() {
   }
