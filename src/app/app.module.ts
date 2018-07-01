@@ -17,8 +17,8 @@ import { PublicVocabModule } from './public-vocab/public-vocab.module';
     BrowserAnimationsModule,
     SharedCoreModule,
     MyVocabModule,
+    PublicVocabModule,
     AppRoutingModule,
-    // PublicVocabModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
