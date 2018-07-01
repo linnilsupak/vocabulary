@@ -9,13 +9,13 @@ import { Observable } from 'rxjs';
   styleUrls: ['./main-content.component.scss']
 })
 export class MainContentComponent implements OnInit {
-  @Input() isMenuActivate: boolean;
-  @Output() toggleSideNave = new EventEmitter<any>();
+  @Input() isSideNavActivate: boolean;
+  @Output() toggleSideNav = new EventEmitter<any>();
   isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset);
   
   constructor(private breakpointObserver: BreakpointObserver) {
-    if (!this.isMenuActivate) {
-      this.isMenuActivate=false;
+    if (!this.isSideNavActivate) {
+      this.isSideNavActivate=false;
     }
   }
 
@@ -23,6 +23,6 @@ export class MainContentComponent implements OnInit {
   }
 
   toggle(){
-    this.toggleSideNave.emit(null);
+    this.toggleSideNav.emit(null);
   }
 }
