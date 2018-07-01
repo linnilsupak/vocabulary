@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PublicVocabRoutingModule } from './public-vocab-routing.module';
 import { HomeComponent } from './home/home.component';
+import { PublicContentComponent } from './public-content/public-content.component';
 
 @NgModule({
   imports: [
     CommonModule,
     PublicVocabRoutingModule
   ],
-  declarations: [HomeComponent]
+  declarations: [HomeComponent, PublicContentComponent]
 })
 export class PublicVocabModule { }

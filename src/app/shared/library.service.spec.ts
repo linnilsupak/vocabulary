@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { MyLibraryService } from './my-library.service';
+import { LibraryService } from './library.service';
 
 describe('MyLibraryService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [MyLibraryService]
+      providers: [LibraryService]
     });
   });
 
-  it('should be created', inject([MyLibraryService], (service: MyLibraryService) => {
+  it('should be created', inject([LibraryService], (service: LibraryService) => {
     expect(service).toBeTruthy();
   }));
 });

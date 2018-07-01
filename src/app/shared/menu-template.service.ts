@@ -5,12 +5,20 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MenuTemplateService {
-  sideNavList$: Observable<string[]>;
-  // tittle: string;
+  // private title: string;
+  // private titleFreeStyle: boolean;
 
-  constructor() {
+  // constructor() {
+  //   this.titleFreeStyle =false;
+  // }
 
-  }
+  // setTitle(title) {
+  //   this.title = title;
+  // }
+
+  // getTitle(): string {
+  //   return this.title;
+  // }
 
   // setSideNavList(_sideNavList$: Observable<string[]>) {
   //   this.sideNavList$ = _sideNavList$;

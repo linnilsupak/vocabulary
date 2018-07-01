@@ -1,0 +1,21 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav
+      #drawer
+      class="sidenav"
+      fixedInViewport="true"
+      [attr.role]="isHandset ? 'dialog' : 'navigation'"
+      [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
+      [opened]="!(isHandset | async)!.matches"> 
+      <!-- how to add multiple router-outlet >> http://tphangout.com/angular-2-multiple/ -->
+      <!-- <router-outlet name="menu" ></router-outlet> -->
+      <mat-toolbar color="primary">Library</mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item href="#" *ngFor="let menuitem of (libraryList$ | async)">{{menuitem.name}}</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content id="sidenav-content">
+        <v-main-content isMenuActivate="true" (toggleSideNave)="drawer.toggle()" >
+            <router-outlet></router-outlet>
+        </v-main-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
